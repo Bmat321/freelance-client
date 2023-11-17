@@ -1,0 +1,94 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: green;
+  color: white;
+  transition: 0.5 all ease;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.navbar.active {
+  background-color: white;
+  color: black;
+}
+.navbar .container {
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10px;
+}
+.navbar .container .logo {
+  font-size: 34px;
+  font-weight: bold;
+}
+.navbar .container .logo .dot {
+  color: #1dbf73;
+}
+.navbar .container .link {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-weight: 500;
+  font-family: "Montserrat", "sans-serif";
+}
+.navbar .container .link .user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  position: relative;
+}
+.navbar .container .link .user img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.navbar .container .link .user .options {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: gray;
+  width: 200px;
+  font-weight: 300;
+}
+.navbar .container .link button {
+  border-radius: 5px;
+  border: 1px solid white;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: white;
+  background-color: transparent;
+}
+.navbar .container .link button.active {
+  color: black;
+  border: 1px solid vlack;
+}
+.navbar .container .link button:hover {
+  background-color: #1dbf73;
+  color: white;
+}
+.navbar hr {
+  width: 100%;
+  height: 0;
+  border: 0.5 solid lightblue;
+}
+.navbar .menu {
+  width: 1200px;
+  padding: 10px 0px;
+  display: flex;
+  justify-content: space-between;
+  color: gray;
+  font-weight: 300;
+  font-family: "Montserrat", sans-serif;
+}/*# sourceMappingURL=navbar.css.map */

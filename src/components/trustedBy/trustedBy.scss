@@ -1,0 +1,32 @@
+@import "../../responsive.scss";
+
+.trustedBy {
+  background-color: #fafafa;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+
+  .container {
+    max-width: 760px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: rgb(200, 200, 200);
+    font-weight: 500;
+
+    @include lg {
+      max-width: 350px;
+      gap: 5px;
+      font-size: 10px;
+    }
+
+    img {
+      height: 50px;
+      object-fit: contain;
+      @include md {
+        height: 30px;
+        gap: 10px;
+      }
+    }
+  }
+}

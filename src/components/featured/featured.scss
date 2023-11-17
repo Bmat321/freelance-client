@@ -1,0 +1,140 @@
+@import "../../responsive.scss";
+
+.featured {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  background-color: green;
+  color: white;
+
+  @include xl {
+    height: 300px;
+  }
+  @include md {
+    height: 200px;
+  }
+
+  .container {
+    width: 1200px;
+    display: flex;
+    align-items: center;
+
+    @include xl {
+      max-width: 1000px;
+    }
+    @include lg {
+      max-width: 700px;
+    }
+    @include md {
+      max-width: 350px;
+    }
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      h1 {
+        font-size: 50px;
+        @include lg {
+          font-size: 30px;
+        }
+        @include md {
+          font-size: 18px;
+          max-width: 350px;
+        }
+
+        span {
+          font-style: italic;
+          font-weight: 300;
+        }
+      }
+
+      .search {
+        background-color: white;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        overflow: hidden;
+
+        @include md {
+          max-width: 350px;
+          height: 40px;
+        }
+
+        .searchInput {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          img {
+            width: 20px;
+            height: 20px;
+            margin: 10px;
+          }
+
+          input {
+            border: none;
+            outline: none;
+
+            &::placeholder {
+              color: gray;
+            }
+          }
+        }
+
+        button {
+          width: 120px;
+          height: 50px;
+          border: none;
+          background-color: #009900;
+          color: white;
+          align-self: flex-end;
+          cursor: pointer;
+
+          @include md {
+            width: 80px;
+            padding-top: 8px ;       
+          }
+        }
+      }
+
+      .popular {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      
+
+        span {
+          width: max-content;
+        }
+
+        button {
+          width: max-content;
+          color: white;
+          border: 1px solid white;
+          padding: 5px 10px;
+          border-radius: 20px;
+          background-color: transparent;
+          font-size: 14px;
+          @include md {
+            max-width: 350px;
+            font-size: 8px;
+          }
+        }
+      }
+    }
+
+    .right {
+      height: 100%;
+      img {
+        height: 100%;
+        object-fit: contain;
+
+        @include md {
+          display: none;
+        }
+      }
+    }
+  }
+}
