@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./MyGigs.scss";
+import "./myGigs.scss";
 
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import getCurrentUser from "../utils/getCurrentUser";
