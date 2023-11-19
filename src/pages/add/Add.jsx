@@ -1,5 +1,5 @@
 import React, { useReducer, useState } from "react";
-import "./Add.scss";
+import "./add.scss";
 import { gigReducer, INITIAL_STATE } from "../../reducer/gigReducer";
 import upload from "../utils/upload";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
