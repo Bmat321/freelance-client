@@ -7,11 +7,8 @@ import { useQuery } from "@tanstack/react-query";
 import Reviews from "../../components/reviews/Reviews";
 import { makeRequest } from "../utils/makeRequest";
 
-
 function Gig() {
   const { id } = useParams();
-  
-
 
   const { isLoading, error, data } = useQuery({
     queryKey: ["gig"],
@@ -22,6 +19,8 @@ function Gig() {
   });
 
   const userId = data?.userId;
+
+  const incresedTo1 = data?.starNumber + 1;
 
   const {
     isLoading: isLoadingUser,
@@ -61,14 +60,14 @@ function Gig() {
                   alt=""
                 />
                 <span>{dataUser.username}</span>
-                {!isNaN(data.totalStars / data.starNumber) && (
+                {!isNaN(data.totalStars / incresedTo1) && (
                   <div className="stars">
-                    {Array(Math.round(data.totalStars / data.starNumber))
+                    {Array(Math.round(data.totalStars / incresedTo1))
                       .fill()
                       .map((item, i) => (
                         <img src="/img/star.png" alt="" key={i} />
                       ))}
-                    <span>{Math.round(data.totalStars / data.starNumber)}</span>
+                    <span>{Math.round(data.totalStars / incresedTo1)}</span>
                   </div>
                 )}
               </div>
@@ -91,16 +90,14 @@ function Gig() {
                   <img src={dataUser.img || "/img/noavatar.jpg"} alt="" />
                   <div className="info">
                     <span>{dataUser.username}</span>
-                    {!isNaN(data.totalStars / data.starNumber) && (
+                    {!isNaN(data.totalStars / incresedTo1) && (
                       <div className="stars">
-                        {Array(Math.round(data.totalStars / data.starNumber))
+                        {Array(Math.round(data.totalStars / incresedTo1))
                           .fill()
                           .map((item, i) => (
                             <img src="/img/star.png" alt="" key={i} />
                           ))}
-                        <span>
-                          {Math.round(data.totalStars / data.starNumber)}
-                        </span>
+                        <span>{Math.round(data.totalStars / incresedTo1)}</span>
                       </div>
                     )}
                     <button>Contact Me</button>

@@ -1,6 +1,11 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import React from "react";
-import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
+import {
+  Outlet,
+  RouterProvider,
+  ScrollRestoration,
+  createBrowserRouter,
+} from "react-router-dom";
 import "./app.scss";
 import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
@@ -19,17 +24,13 @@ import Success from "./pages/success/Success";
 
 const queryClient = new QueryClient();
 
-{
-  /* <ChakraProvider>
-</ChakraProvider> */
-}
-
 const Layout = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <div className="main">
         <Navbar />
         <div className="">
+          <ScrollRestoration />
           <Outlet />
         </div>
         <Footer />
